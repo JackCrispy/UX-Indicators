@@ -2,7 +2,7 @@
 An Indicator script for FiveM! - Apart of the UX Family.
 
 # SUPPORT
-https://discord.gg/uVSbBrm\
+https://discord.gg/uVSbBrm
 
 **UX Indicators**
 A part of the UX Family.
