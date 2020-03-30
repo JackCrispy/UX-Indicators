@@ -1,18 +1,21 @@
 --[[
   --=--|----------------------------------------|--=--
-			    	UX INDICATORS
-				a part of the UX family.
+		    UX INDICATORS
+		a part of the UX family.
 
 	===[Support] https://discord.gg/uVSbBrm
 	===[Developer] Jack Crispy#3964
 
   --=--|----------------------------------------|--=--
+]]--
+  local leftkey = 43
+  local rightkey = 42
+  local hazards = 84
 
 --=-- ---------------------------------------- --=--
 --=--            DON'T TOUCH BELOW             --=--
 --=-- ---------------------------------------- --=--
 
-]]--
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
@@ -49,10 +52,10 @@ AddEventHandler('IND', function(dir)
 			if GetPedInVehicleSeat(Veh, -1) == Ped then
 				if dir == 'left' then
 					INDL = not INDL
-					TriggerServerEvent('IndicatorL', INDL)
+					TriggerServerEvent('INDL', INDL)
 				elseif dir == 'right' then
 					INDR = not INDR
-					TriggerServerEvent('IndicatorR', INDR)
+					TriggerServerEvent('INDR', INDR)
 				end
 			end
 		end
