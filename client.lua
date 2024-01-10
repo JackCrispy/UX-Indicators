@@ -12,34 +12,28 @@
   local rightkey = 42
   local hazards = 84
 
---=-- ---------------------------------------- --=--
---=--            DON'T TOUCH BELOW             --=--
---=-- ---------------------------------------- --=--
+  RegisterKeyMapping('turnleft', "Left turnsignal toggle", 'keyboard', "NUMPAD1")
+  RegisterKeyMapping('turnright', "Right turnsignal toggle", 'keyboard', "NUMPAD3")
+  RegisterKeyMapping('hazards', "Hazardlights toggle", 'keyboard', "NUMPAD0")
 
-Citizen.CreateThread(function()
-    while true do
-        Citizen.Wait(0)
-		if IsControlJustPressed(1, leftkey) then 
-			if IsPedInAnyVehicle(GetPlayerPed(-1), true) then
-				TriggerEvent('IND', 'left')
-			end
-		end
+  RegisterCommand('turnleft', function()
+	if IsPedInAnyVehicle(GetPlayerPed(-1), true) then
+	  TriggerEvent('IND', 'left')
+	end
+  end, false)
 
-		if IsControlJustPressed(1, rightkey) then 
-			if IsPedInAnyVehicle(GetPlayerPed(-1), true) then
-				TriggerEvent('IND', 'right')
-			end
-		end
-		
-		if IsControlJustPressed(1, hazards) then
-			if IsPedInAnyVehicle(GetPlayerPed(-1),true) then
-				TriggerEvent('IND', 'left')
-				TriggerEvent('IND', 'right')
-			end
-		end
-		
-    end
-end)
+  RegisterCommand('turnright', function()
+	if IsPedInAnyVehicle(GetPlayerPed(-1), true) then
+	  TriggerEvent('IND', 'right')
+	end
+  end, false)
+
+  RegisterCommand('hazards', function()
+	if IsPedInAnyVehicle(GetPlayerPed(-1), true) then
+	  TriggerEvent('IND', 'left')
+	  TriggerEvent('IND', 'right')
+	end
+  end, false)
 
 local INDL = false -- Don't Touch
 local INDR = false -- Don't Touch
