@@ -8,9 +8,6 @@
 
   --=--|----------------------------------------|--=--
 ]]--
-  local leftkey = 43
-  local rightkey = 42
-  local hazards = 84
 
   RegisterKeyMapping('turnleft', "Left turnsignal toggle", 'keyboard', "NUMPAD1")
   RegisterKeyMapping('turnright', "Right turnsignal toggle", 'keyboard', "NUMPAD3")
