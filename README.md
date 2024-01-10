@@ -13,11 +13,13 @@ A part of the UX Family.
 
 ## Overview
 The default key-binds are as follows; 
+These can be changed under keybinds in the settings
 ```
-Left Indicator - [
-Right Indicator - ]
-Hazards - Backspace Key
+Left Indicator - Numpad 1
+Right Indicator - Numpad 3
+Hazards - Numpad 0
 ```
+
 
 ## Customise
 To change the trigger keys, just go into the client.lua file and replace the values in the config at the top of the file with your own.
